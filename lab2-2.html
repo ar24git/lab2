@@ -5,5 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>lab2-2</title>
   </head>
-  <body></body>
+  <body>
+    <h1>Application Form</h1>
+    <form action="">
+      <fieldset>
+        <legend>Personal data</legend>
+        <p>Fill your personal data</p>
+        <div>
+          <label for="Name">Name and Surname</label><br />
+          <input
+            type="text"
+            name="Name"
+            size="20"
+            placeholder="Name"
+            id="Name"
+          />
+          <input
+            type="text"
+            name="Surname"
+            size="20"
+            placeholder="Surname"
+          /><br /><br />
+        </div>
+        <div>
+          <label for="Address">Address</label><br />
+          <input
+            type="text"
+            name="Address"
+            id="Address"
+            size="50"
+            placeholder="Street and number"
+          /><br /><br />
+          <input
+            type="text"
+            name="City"
+            id="City"
+            size="40"
+            placeholder="City"
+          />
+          <input
+            type="text"
+            name="Postcode"
+            id="Postcode"
+            pattern="^[0-9]{3}[ ]?[0-9]{2}$"
+            size="5"
+            maxlength="5"
+            placeholder="Postcode"
+          /><br /><br />
+        </div>
+        <div>
+          <label for="Phone">Contact information</label><br />
+          <input type="tel" name="Phone" placeholder="Phone" id="Phone" />
+          <input
+            type="email"
+            name="Email"
+            size="30"
+            placeholder="Email"
+          /><br /><br />
+        </div>
+        <div>
+          <label for="studyYear">Year of study </label>
+          <label for="sYA">A</label>
+          <input type="radio" name="year" id="sYA" />
+          <label for="sYB">B</label>
+          <input type="radio" name="year" id="sYB" />
+          <label for="sYC">C</label>
+          <input type="radio" name="year" id="sYC" />
+          <label for="sYD">D</label>
+          <input type="radio" name="year" id="sYD" /><br /><br />
+        </div>
+        <div>
+          <label for="Mnumber">Matriculation number</label><br />
+          <input
+            name="Mnumber"
+            id="Mnumber"
+            type="number"
+            minlength="7"
+            min="1000000"
+            placeholder="1050505"
+          />
+        </div>
+      </fieldset>
+
+      <fieldset>
+        <legend>Choose type pf certificate and delivery</legend>
+        <div>
+          <label for="crtf">Certificate type</label><br />
+          <select name="certificate" id="crtf">
+            <option value="c1">Grades certificate</option>
+            <option value="c2">Student certificate</option>
+            <option value="c3">Student ID card</option>
+            <option value="c4">ID card</option>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Delivery</legend>
+        <div>
+          <label for="secretariat">Pick up at the secretariat</label>
+          <input type="radio" name="secretariat" id="secretariat" /><br />
+          <label for="homeAdress">Via post at home address</label>
+          <input type="radio" name="homeAddress" id="homeAdress" /><br /><br />
+        </div>
+        <div>
+          <label for="pdate">Pick up date</label><br />
+          <input type="date" name="pdate" id="pdate" />
+        </div>
+      </fieldset>
+      <br />
+      <input type="submit" name="submit" />
+    </form>
+  </body>
 </html>
